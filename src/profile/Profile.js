@@ -1,13 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
+import Image from './image';
 
 
 function Profile(props) {
 
 
     return (
+        
         <div className='Profile' >
+            <Image img={'https://ccie.ucf.edu/wp-content/uploads/sites/12/2018/04/hs-DCarroll.jpg'}/>
             <h1 style={{fontFamily:'bold'}}>Full Name</h1>
             {props.fullName}
             <h1 style={{fontFamily:'bold'}}>Bio</h1>
@@ -16,7 +18,7 @@ function Profile(props) {
 
             {props.profession}
             <br></br>
-            <a href="#" onClick={props.handleName} style={{fontFamily:'bold'}}>
+            <a href="#"  onClick={e=> { e.preventDefault();  props.handleName(props.fullName)}}  style={{fontFamily:'bold'}}>
                 click me
         </a>
         </div>);

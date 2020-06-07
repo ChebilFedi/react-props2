@@ -5,9 +5,9 @@ import Profile from './profile/Profile';
 
 
 
-const handleName = (e) => {
-  e.preventDefault();
-  alert(`hello Debrah Carroll`)
+const handleName = (name) => {
+  
+  alert(`hello ${name}`);
 }
 
 function App() {
